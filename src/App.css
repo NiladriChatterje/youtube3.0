@@ -1,38 +1,44 @@
-.App {
-  text-align: center;
+#home::-webkit-scrollbar{
+    width:8px;
+}
+#home::-webkit-scrollbar-track{
+    background-color: transparent;
+}
+#home::-webkit-scrollbar-thumb{
+    background-color: rgb(174, 12, 12);
+    border-radius: 10px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#player::-webkit-scrollbar{
+    width:8px;
+}
+#player::-webkit-scrollbar-track{
+    background-color: transparent;
+}
+#player::-webkit-scrollbar-thumb{
+    background-color: rgb(174, 12, 12);
+    border-radius: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#channel::-webkit-scrollbar{
+    width:8px;
+}
+#channel::-webkit-scrollbar-track{
+    background-color: transparent;
+}
+#channel::-webkit-scrollbar-thumb{
+    background-color: rgb(213, 16, 16);
+    border-radius: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
-.App-link {
-  color: #61dafb;
+#suggested::-webkit-scrollbar{
+    width:8px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#suggested::-webkit-scrollbar-track{
+    background-color: transparent;
+}
+#suggested::-webkit-scrollbar-thumb{
+    background-color: rgb(213, 16, 16);
+    border-radius: 10px;
 }

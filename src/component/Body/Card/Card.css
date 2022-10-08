@@ -1,0 +1,9 @@
+#card:hover{
+    background-color: white;
+    color: black;
+    border-radius: 5px;
+    transform: scale(1.02,1.02);
+}
+#iconHover:hover{
+color:rgb(219, 12, 12);
+}
