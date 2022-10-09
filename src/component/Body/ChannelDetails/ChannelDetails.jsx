@@ -42,7 +42,7 @@ const ChannelDetails = () => {
         pos={'absolute'}
         zIndex={-1}
         >
-            <Image src={meta?.image?.banner[1]?.url} w={'100vw'} />
+            {meta?.image?.banner && <Image src={meta?.image?.banner[0]?.url || 'https://yt3.ggpht.com/vNzmvuRZTv-uWYDxDvK1nMmp45VM36C84HNUm13hk3qTl0D4xAecwBUEn7BhefG_e7oNoz2l=w1060-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj'} w={'100vw'} />}
         </Box>
         <Image 
         borderRadius={'50%'}

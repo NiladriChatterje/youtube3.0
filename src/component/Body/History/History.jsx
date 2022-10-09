@@ -12,6 +12,8 @@ const History = () => {
   
   return (
     <Flex 
+    p={5}
+    justifyContent={window.innerWidth<1200?'center':'left'}
     flexWrap={'wrap'}
       w='full' 
       h ='max-content'>
