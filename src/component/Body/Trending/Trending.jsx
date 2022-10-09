@@ -9,23 +9,23 @@ const genre =['music','now','games','movies']
 
 const Trending = () => {
 const [localData,setLocalData] = React.useState(()=>[])
-const [country,setGenre] = React.useState(()=>'music')
+const [genres,setGenre] = React.useState(()=>'music')
 const navigate = useNavigate();
 
 React.useEffect(()=>{
   let isMounted= true;
   if(isMounted){
-    async function fetchTrendData(genre){
-      const response = await fetch('https://youtube-v3-alternative.p.rapidapi.com/trending?geo=IN&type='+genre,options)
+    async function fetchTrendData(genres){
+      const response = await fetch('https://youtube-v3-alternative.p.rapidapi.com/trending?geo=IN&type='+genres,options)
       const {data} = await response.json();
       console.log(data);
       setLocalData(data)
     }
-   fetchTrendData(genre);
+   fetchTrendData(genres);
   }
 
   return ()=>{isMounted=false}
-},[genre]);
+},[genres]);
 
   return (
     <Flex 
