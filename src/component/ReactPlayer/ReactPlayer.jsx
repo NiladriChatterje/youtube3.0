@@ -3,7 +3,7 @@ import React from 'react'
 import { AiFillLike } from 'react-icons/ai';
 import { GiWarlockEye } from 'react-icons/gi';
 import ReactPlayer from 'react-player';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useParams,useNavigate } from 'react-router-dom';
 import {options, SideBar,URL2} from '../../App'
 import Card from '../Body/Card/Card';
 
@@ -11,7 +11,7 @@ const URL = 'https://youtube-v3-alternative.p.rapidapi.com/video?id='
 const URL3 = 'https://youtube-v3-alternative.p.rapidapi.com/comments?id='
 
 const Reactplayer = () => {
-    
+    const navigate = useNavigate();
     const {setIsLoading} = React.useContext(SideBar)
     const [localData,setLocalData] = React.useState(()=>{});
     const [suggestions,setSuggestions] = React.useState(()=>[])
@@ -100,7 +100,11 @@ const Reactplayer = () => {
             >
                <Divider />
               <Flex>
-                <Image src={item?.authorProfileImageUrl[0]?.url}
+                <Image
+                cursor={'pointer'}
+                src={item?.authorProfileImageUrl[0]?.url}
+                onClick={(e)=>{e.stopPropagation();
+                             navigate(`/ChannelDetails/${item?.channelId}`) }}
                 style={{width:'40px',height:'40px',borderRadius:'50%'}}
                 />
                 <Box w={'full'}>
