@@ -104,7 +104,7 @@ const Reactplayer = () => {
                 cursor={'pointer'}
                 src={item?.authorProfileImageUrl[0]?.url}
                 onClick={(e)=>{e.stopPropagation();
-                             navigate(`/ChannelDetails/${item?.channelId}`) }}
+                             navigate(`/ChannelDetails/${item?.authorChannelId}`) }}
                 style={{width:'40px',height:'40px',borderRadius:'50%'}}
                 />
                 <Box w={'full'}>
