@@ -18,6 +18,10 @@ function addSuggestedVideo(suggestedVideo){
 const Card = ({item}) => {
     const {historyList,setHistoryList,setSuggestedVideo,suggestedVideo} = React.useContext(SideBar);
     
+    React.useEffect(()=>{
+            addHistory(historyList.reverse());
+            addSuggestedVideo(suggestedVideo)
+    },[historyList])
 
   return (
     <Link to={`/player/${item.videoId}`}
@@ -32,8 +36,7 @@ const Card = ({item}) => {
                 lengthText: item.lengthText?item.lengthText:'',
             }]);
             setSuggestedVideo(item.videoId)
-            addHistory(historyList.reverse());
-            addSuggestedVideo(suggestedVideo)}}>
+            }}>
         <Box
             id='card'
             m={5}
