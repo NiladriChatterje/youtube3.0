@@ -21,7 +21,7 @@ function App() {
   const [isToggle,setIsToggle] = React.useState(()=>true)
   const [suggestedVideo,setSuggestedVideo] = React.useState(()=>(localStorage.getItem('suggested')||'dQw4w9WgXcQ'))
   const [data,setData] = React.useState(()=>[]);
-  const [historyList,setHistoryList] = React.useState(()=>(JSON.parse(localStorage.getItem('history')).reverse()||[]));
+  const [historyList,setHistoryList] = React.useState(()=>(JSON.parse(localStorage.getItem('history'))?.reverse()||[]));
   const [isLoading,setIsLoading] = React.useState(()=>true)
 
   return (
